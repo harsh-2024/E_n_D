@@ -1,9 +1,5 @@
 import pyfiglet
 import random
-  
-# result = pyfiglet.figlet_format("EnD", font="slant")
-# print(result)
-
 result = pyfiglet.figlet_format("EnD", font = "slant" )
 print(result)
 
@@ -15,8 +11,8 @@ def encrypt(text, shifts):
     position=alphabet.index(letter)
     new_position=position+shifts
     cipher_text+=alphabet[new_position]
-  print(cipher_text)
-  cont=input("do you wish to continue \n  Write yes to continue and no to finish").lower()
+  print(f"Your encrypted message now is {cipher_text} \n")
+  cont=input("do you wish to continue \n  Write yes to continue and no to finish \n").lower()
   if cont =="yes":
       repeat()
 
@@ -26,7 +22,7 @@ def decrypt(text,shifts):
         position=alphabet.index(letter)
         new_position=position-shifts
         original_texts+=alphabet[new_position]
-    print(original_texts)
+    print(f"Your encrypted message now is {original_texts} \n")
     cont=input("do you wish to continue \n  Write yes to continue and no to finish \n").lower()
     if cont =="yes":
       repeat()
